@@ -1,0 +1,38 @@
+@theme {
+    --color-primary: #1152d4;
+    --color-background-light: #f6f6f8;
+    --color-background-dark: #0B1120;
+    --color-navy-dark: #0a121e;
+    --color-navy-light: #151e2e;
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+
+    --font-family-display: "Inter", sans-serif;
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
