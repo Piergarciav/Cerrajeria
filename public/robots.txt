@@ -26,4 +26,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: https://cerrajeriapiura.com/sitemap.xml
