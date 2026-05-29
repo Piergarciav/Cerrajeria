@@ -19,3 +19,6 @@ pnpm-debug.log*
 .vscode/
 # Local Pi runtime state
 .atl/
+.agents/
+.pi/
+skills-lock.json
