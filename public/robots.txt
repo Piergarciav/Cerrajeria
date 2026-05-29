@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Permitir a los bots de motores de IA explícitamente para SEO impulsado por IA (AIO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OmgiliBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://tu-dominio.com/sitemap.xml

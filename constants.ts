@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
 ];
 
 export const SOCIAL_LINKS = {
-  facebook: '#',
-  instagram: '#',
+  facebook: 'https://facebook.com/cerrajerapiura247',
+  instagram: 'https://instagram.com/cerrajerapiura247',
   whatsapp: getWhatsAppLink('Hola, vi su web y necesito un cerrajero en Piura.')
 };

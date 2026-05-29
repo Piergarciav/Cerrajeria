@@ -2,7 +2,6 @@
 @import "./theme.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;
