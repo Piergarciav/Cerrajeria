@@ -35,7 +35,15 @@
     content="Servicio de cerrajería urgente en Piura. Abrimos puertas y autos sin daños. Asistencia inmediata las 24 horas al 942 854 039.">
   <meta name="twitter:image" content="/hero-bg.webp">
 
-  <!-- Structured Data (JSON-LD) -->
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display antialiased overflow-x-hidden selection:bg-accent selection:text-background-dark">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+
+  <!-- Structured Data (JSON-LD) Deferred for Zero Head Parser Latency -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -92,14 +100,6 @@
       "priceRange": "$$"
     }
     </script>
-
-  <link rel="stylesheet" href="/index.css">
-</head>
-
-<body
-  class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display antialiased overflow-x-hidden selection:bg-accent selection:text-background-dark">
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
 </body>
 
 </html>
