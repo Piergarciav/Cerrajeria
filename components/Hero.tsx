@@ -78,8 +78,8 @@ const Hero: React.FC = () => {
               <img
                 src="/hero-bg.webp"
                 alt="Servicio de cerrajería profesional en Piura"
-                width="448"
-                height="560"
+                width="463"
+                height="617"
                 decoding="async"
                 fetchPriority="high"
                 className="absolute inset-0 w-full h-full object-cover mix-blend-normal dark:mix-blend-overlay opacity-95 dark:opacity-75 transition-scale duration-500 ease-out-emil hover:scale-105"
