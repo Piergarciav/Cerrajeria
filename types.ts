@@ -4,6 +4,8 @@ export interface Service {
   description: string;
   icon: string;
   linkText: string;
+  badge?: string;
+  isFeatured?: boolean;
 }
 
 export interface NavItem {

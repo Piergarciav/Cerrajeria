@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-21T00:00:00.000Z",
+  "title": "Design System: 24/7 Piura - Cerrajería Experta",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Deep Blue",
+        "canonical": "#1152d4",
+        "tonalRamp": ["#050e24", "#0a1c47", "#0f2a6b", "#14388e", "#1152d4", "#4b7de0", "#8fabec", "#d4e0fa"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#3b82f6",
+        "tonalRamp": ["#0a1730", "#122a5c", "#1a3d88", "#2660c9", "#3b82f6", "#6ea3f8", "#a3c4fb", "#d6e5fe"]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Signal Blue Hover",
+        "canonical": "#2563eb",
+        "tonalRamp": ["#081428", "#0f2450", "#163478", "#1c4bb2", "#2563eb", "#5c8bf1", "#98b8f7", "#d0e0fc"]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Console Navy",
+        "canonical": "#0B1120",
+        "tonalRamp": ["#03050a", "#070a15", "#0B1120", "#141c33", "#202c4d", "#3a4770", "#6b7699", "#a8b0c7"]
+      },
+      "navy-light": {
+        "role": "neutral",
+        "displayName": "Console Panel",
+        "canonical": "#151e2e",
+        "tonalRamp": ["#050810", "#0a0f1a", "#151e2e", "#212d44", "#334262", "#556485", "#8891ab", "#c1c6d6"]
+      },
+      "navy-dark": {
+        "role": "neutral",
+        "displayName": "Console Deep",
+        "canonical": "#0a121e",
+        "tonalRamp": ["#020304", "#05080d", "#0a121e", "#131e30", "#1e2d47", "#38455f", "#6a7690", "#a6adc0"]
+      },
+      "surface-light": {
+        "role": "neutral",
+        "displayName": "Daylight Surface",
+        "canonical": "#f6f6f8",
+        "tonalRamp": ["#18181c", "#333338", "#57575e", "#83838a", "#b3b3b8", "#dcdce0", "#f6f6f8", "#ffffff"]
+      },
+      "text-heading-light": {
+        "role": "neutral",
+        "displayName": "Heading Ink",
+        "canonical": "#111827",
+        "tonalRamp": ["#04050a", "#0a0d16", "#111827", "#232c40", "#3c465d", "#5d6579", "#8b90a0", "#c3c6cf"]
+      },
+      "text-body-light": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "#374151",
+        "tonalRamp": ["#0d0f13", "#191d24", "#282e39", "#374151", "#525c6b", "#767f8c", "#a4abb4", "#d3d6da"]
+      },
+      "text-muted-light": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#4b5563",
+        "tonalRamp": ["#111317", "#20242b", "#333944", "#4b5563", "#69707c", "#8c919b", "#b6b9c0", "#e0e2e5"]
+      },
+      "text-muted-dark": {
+        "role": "neutral",
+        "displayName": "Muted Ink (dark)",
+        "canonical": "#9ca3af",
+        "tonalRamp": ["#25272b", "#3b3e44", "#54575f", "#6f727b", "#9ca3af", "#bcc0c8", "#dcdee2", "#f2f3f4"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only, one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Card and component headings." },
+      "body": { "displayName": "Body", "purpose": "Descriptive paragraph copy, capped ~65ch." },
+      "label": { "displayName": "Label", "purpose": "Eyebrow tags, badges, status strings." }
+    },
+    "shadows": [
+      { "name": "cta-glow", "value": "0 0 25px rgba(59,130,246,0.4)", "purpose": "Primary CTA at rest; signals the live action." },
+      { "name": "cta-glow-hover", "value": "0 0 35px rgba(59,130,246,0.6)", "purpose": "Primary CTA on hover." },
+      { "name": "panel-lift", "value": "0 25px 50px -12px rgba(0,0,0,0.25)", "purpose": "Hero mockup panel only." }
+    ],
+    "motion": [
+      { "name": "ease-out-emil", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default easing for all interactive transitions." },
+      { "name": "ease-in-out-emil", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Symmetric transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action (call / WhatsApp), carries the CTA glow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Solicitar Auxilio</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 32px; border-radius: 8px; background: #3b82f6; color: #ffffff; font-weight: 700; font-size: 16px; text-decoration: none; box-shadow: 0 0 25px rgba(59,130,246,0.4); transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), background 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:hover { background: #2563eb; box-shadow: 0 0 35px rgba(59,130,246,0.6); transform: translateY(-4px); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Low-emphasis action, no glow, transparent fill.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Ver Soluciones</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 32px; border-radius: 8px; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-weight: 500; font-size: 16px; text-decoration: none; transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), background 200ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-secondary:hover { background: rgba(255,255,255,0.05); transform: translateY(-4px); } .ds-btn-secondary:active { transform: scale(0.97); } .ds-btn-secondary:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Icon, title, description, and WhatsApp link for one locksmith service.",
+      "html": "<article class=\"ds-card-service\"><div class=\"ds-card-service__icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"24\" height=\"24\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></svg></div><h3 class=\"ds-card-service__title\">Apertura de Puertas</h3><p class=\"ds-card-service__desc\">Apertura de emergencia sin daños, en minutos.</p><a class=\"ds-card-service__link\" href=\"#\">Solicitar &#8594;</a></article>",
+      "css": ".ds-card-service { display: flex; flex-direction: column; gap: 16px; padding: 32px; border-radius: 16px; background: #0B1120; border: 1px solid rgba(255,255,255,0.05); transition: border-color 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-card-service:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-8px); } .ds-card-service__icon { width: 48px; height: 48px; border-radius: 8px; background: #151e2e; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #3b82f6; } .ds-card-service__title { font-size: 20px; font-weight: 700; color: #ffffff; } .ds-card-service__desc { font-size: 14px; line-height: 1.6; color: #9ca3af; } .ds-card-service__link { margin-top: auto; color: #3b82f6; font-size: 14px; font-weight: 700; text-decoration: none; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Pill-shaped light/dark switch with sliding thumb.",
+      "html": "<button class=\"ds-theme-toggle\" aria-label=\"Cambiar tema\"><span class=\"ds-theme-toggle__thumb\"></span></button>",
+      "css": ".ds-theme-toggle { position: relative; width: 64px; height: 32px; border-radius: 9999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); cursor: pointer; } .ds-theme-toggle:hover { border-color: rgba(59,130,246,0.5); } .ds-theme-toggle__thumb { position: absolute; top: 4px; left: 4px; width: 24px; height: 24px; border-radius: 9999px; background: #151e2e; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 2px 6px rgba(0,0,0,0.3); transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-theme-toggle:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Emergency Dispatch Console",
+    "overview": "This is a service you reach for when something has already gone wrong: a lockout, a broken key, a door that won't open. The interface borrows its composure from dispatch and control-room software, not from a home-decor catalogue: a dark, low-glare surface by default (most lockouts happen at night), a single blue signal color that means \"this is active and it works,\" and generous negative space so the one thing that matters (call, WhatsApp) is never competing for attention. Light mode exists for daytime browsing but the dark navy console is the resting state. The system explicitly rejects the generic-locksmith template look: no stock key/padlock photography, no gold-and-black \"security company\" cliché, no cluttered service walls, no fake-urgency banners. Gold accents present in earlier drafts (scrollbar thumb, logo gradient, hero headline gradient) are being retired for this reason; every accent in this system is the single blue signal, never a second metallic tone competing with it.",
+    "keyCharacteristics": [
+      "Dark-first console surface, not a bright consumer landing page",
+      "One accent color (signal blue) carrying all emphasis and interactivity",
+      "Rounded-but-solid geometry (16px cards, 8px controls), not soft/bubbly",
+      "Elevation on hover reads as \"this responds,\" not decorative depth",
+      "Copy-led hierarchy: the phone/WhatsApp CTA is always the loudest element on screen"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Signal Blue is the only accent color in the system. No second accent, no gold, no green-for-success/red-for-error palette expansion; state is communicated through the blue's opacity and motion, not through additional hues.", "section": "colors" },
+      { "name": "The Console-Is-Home Rule", "body": "Dark navy is the default, resting appearance, not a toggle-triggered special case. Light mode is a courtesy for daytime reading, not the canonical look.", "section": "colors" },
+      { "name": "The Weight-Over-Size Rule", "body": "Hierarchy is built from weight contrast (300 → 700 → 900) before it's built from size. A label and a body line can share a font-size; they never share a weight.", "section": "typography" },
+      { "name": "The Earned Glow Rule", "body": "Glow is a privilege of the single primary CTA. Solid, direct components skip glow entirely and rely on border and background-tint changes on hover; if a second element starts glowing, the first one stops meaning anything.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Signal Blue (#3b82f6) as the only interactive/accent color across the entire system.",
+      "Do default every new surface to the dark Console Navy (#0B1120) theme; treat light mode as the secondary path.",
+      "Do reserve the CTA glow (rgba(59,130,246,0.4-0.6)) for the single primary call/WhatsApp action per screen.",
+      "Do build hierarchy through weight contrast (300/700/900) before reaching for size.",
+      "Do use full borders, background tints, or leading icons for emphasis, never a colored border-left/border-right stripe."
+    ],
+    "donts": [
+      "Don't reintroduce gold/yellow (#D4AF37, yellow-600, via-yellow-200) anywhere. Existing instances (scrollbar thumb hover, header logo gradient, hero headline gradient) are legacy and should be migrated to Signal Blue.",
+      "Don't use background-clip: text gradient headlines (the current hero H1 gradient span is a legacy instance to remove).",
+      "Don't use stock photography of keys, padlocks, or generic locksmith iconography.",
+      "Don't stack more than one shadow-glow element on a screen.",
+      "Don't add urgency banners, countdown timers, or time-limited-offer style copy."
+    ]
+  }
+}

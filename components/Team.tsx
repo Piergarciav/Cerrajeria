@@ -4,29 +4,31 @@ const Team: React.FC = () => {
   return (
     <section className="py-24 px-4 md:px-8 bg-background-light dark:bg-background-dark" id="equipo">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-        <div className="order-2 lg:order-1 relative group perspective-1000">
-          <div className="absolute -inset-4 bg-gradient-to-tr from-accent to-primary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-300 ease-out-emil"></div>
-          <div className="relative rounded-[1.5rem] overflow-hidden shadow-2xl border border-black/10 dark:border-white/10 transform transition-transform duration-300 ease-out-emil group-hover:rotate-y-3">
-            <div className="absolute inset-0 bg-accent/10 mix-blend-overlay z-10 pointer-events-none"></div>
-            <img
-              src="/team-work.webp"
-              alt="Técnico cerrajero certificado trabajando en Piura"
-              loading="lazy"
-              width="600"
-              height="450"
-              className="w-full aspect-[4/3] object-cover transition-transform duration-300 ease-out-emil group-hover:scale-105"
-            />
-            <div className="absolute bottom-6 left-6 right-6 z-20">
-              <div className="glass-panel p-4 rounded-xl flex items-center gap-4">
-                <div className="bg-green-500/20 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-5 text-green-400" aria-hidden="true">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-gray-900 dark:text-white font-bold text-sm">Técnicos Certificados</p>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">Más de 10 años de experiencia</p>
+        <div className="order-2 lg:order-1 relative group">
+          <div className="relative rounded-[1.5rem] p-1 bg-slate-200/60 dark:bg-white/10 border border-slate-200/80 dark:border-white/10 shadow-xl transition-transform duration-300 ease-out-emil hover:-translate-y-1">
+            <div className="relative rounded-[1.25rem] overflow-hidden bg-slate-900">
+              <img
+                src="/team-work.webp"
+                alt="Técnico cerrajero certificado trabajando en Piura"
+                loading="lazy"
+                width="600"
+                height="450"
+                className="w-full aspect-[4/3] object-cover transition-transform duration-500 ease-out-emil group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none"></div>
+
+              <div className="absolute bottom-5 left-5 right-5 z-20">
+                <div className="bg-white/95 dark:bg-navy-dark/95 border border-slate-200/80 dark:border-white/10 p-4 rounded-xl flex items-center gap-4 shadow-lg backdrop-blur-md">
+                  <div className="bg-blue-50 dark:bg-accent/20 p-2.5 rounded-xl text-accent border border-blue-200/80 dark:border-accent/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-5 text-accent" aria-hidden="true">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 dark:text-white font-bold text-sm">Técnicos Certificados</p>
+                    <p className="text-xs text-slate-600 dark:text-gray-300">Más de 10 años de experiencia</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -42,43 +44,25 @@ const Team: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="flex gap-4 group cursor-default">
-              <div className="mt-1 size-10 rounded-full bg-white dark:bg-navy-light border border-black/10 dark:border-white/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-200 ease-out-emil">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5 text-accent" aria-hidden="true">
-                  <rect x="3" y="4" width="18" height="16" rx="2" />
-                  <circle cx="12" cy="10" r="3" />
-                  <path d="M7 20c0-2.8 2.2-5 5-5s5 2.2 5 5" />
-                </svg>
-              </div>
+          <div className="flex flex-col border-t border-black/5 dark:border-white/5">
+            <div className="flex items-baseline gap-5 py-5 border-b border-black/5 dark:border-white/5 group cursor-default">
+              <span className="font-mono text-sm font-bold text-accent/50 group-hover:text-accent transition-colors duration-200 ease-out-emil tabular-nums">01</span>
               <div>
                 <h3 className="text-gray-900 dark:text-white font-bold text-lg group-hover:text-accent transition-colors duration-200 ease-out-emil">Identificación Garantizada</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Nuestros técnicos portan fotocheck y uniforme para tu seguridad.</p>
               </div>
             </div>
 
-            <div className="flex gap-4 group cursor-default">
-              <div className="mt-1 size-10 rounded-full bg-white dark:bg-navy-light border border-black/10 dark:border-white/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-200 ease-out-emil">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5 text-accent" aria-hidden="true">
-                  <line x1="10" x2="14" y1="2" y2="2" />
-                  <line x1="12" x2="12" y1="14" y2="11" />
-                  <circle cx="12" cy="14" r="8" />
-                </svg>
-              </div>
+            <div className="flex items-baseline gap-5 py-5 border-b border-black/5 dark:border-white/5 group cursor-default">
+              <span className="font-mono text-sm font-bold text-accent/50 group-hover:text-accent transition-colors duration-200 ease-out-emil tabular-nums">02</span>
               <div>
                 <h3 className="text-gray-900 dark:text-white font-bold text-lg group-hover:text-accent transition-colors duration-200 ease-out-emil">Respuesta Inmediata</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Unidades móviles distribuidas estratégicamente en Piura.</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Servicio a domicilio en toda la ciudad de Piura, mismo día.</p>
               </div>
             </div>
 
-            <div className="flex gap-4 group cursor-default">
-              <div className="mt-1 size-10 rounded-full bg-white dark:bg-navy-light border border-black/10 dark:border-white/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform duration-200 ease-out-emil">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5 text-accent" aria-hidden="true">
-                  <rect x="2" y="5" width="20" height="14" rx="2" />
-                  <line x1="2" x2="22" y1="10" y2="10" />
-                  <circle cx="12" cy="14.5" r="1.5" />
-                </svg>
-              </div>
+            <div className="flex items-baseline gap-5 py-5 border-b border-black/5 dark:border-white/5 group cursor-default">
+              <span className="font-mono text-sm font-bold text-accent/50 group-hover:text-accent transition-colors duration-200 ease-out-emil tabular-nums">03</span>
               <div>
                 <h3 className="text-gray-900 dark:text-white font-bold text-lg group-hover:text-accent transition-colors duration-200 ease-out-emil">Transparencia Total</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Presupuesto claro antes de realizar el trabajo. Sin sorpresas.</p>

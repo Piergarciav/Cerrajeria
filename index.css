@@ -2,6 +2,7 @@
 @import "./theme.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
     width: 8px;
@@ -17,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #D4AF37;
+    background: #2563eb;
 }
 
 html {
@@ -50,4 +51,19 @@ html {
 
 .card-3d:hover {
     transform: rotateX(5deg) rotateY(5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
 }

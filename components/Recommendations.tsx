@@ -58,7 +58,7 @@ const Recommendations: React.FC = () => {
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="text-xs text-gray-500 font-medium">{rec.date}</span>
+                                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{rec.date}</span>
                             </div>
 
                             <p className="text-gray-700 dark:text-gray-300 italic leading-relaxed">"{rec.text}"</p>
@@ -71,13 +71,13 @@ const Recommendations: React.FC = () => {
                                     <span className="text-gray-900 dark:text-white font-bold text-sm flex items-center gap-1">
                                         {rec.name}
                                         {rec.verified && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-3.5 text-blue-400" aria-hidden="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-3.5 text-accent" aria-hidden="true">
                                               <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                                               <path d="m9 12 2 2 4-4" />
                                             </svg>
                                         )}
                                     </span>
-                                    <span className="text-[10px] text-gray-500 uppercase tracking-wider">Cliente Verificado en Piura</span>
+                                    <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wider">Cliente Verificado en Piura</span>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ const Recommendations: React.FC = () => {
                             </svg>
                         ))}
                     </div>
-                    <p className="text-sm text-gray-500">Basado en más de 120 recomendaciones de clientes reales.</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Basado en más de 120 recomendaciones de clientes reales.</p>
                 </div>
             </div>
         </section>
