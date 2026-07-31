@@ -55,9 +55,13 @@ const App: React.FC = () => {
       <main className="flex-1">
         <Hero />
         <Services />
-        <Suspense fallback={<div className="py-24 bg-background-light dark:bg-background-dark" />}>
+        <Suspense fallback={<div className="py-12 bg-background-light dark:bg-background-dark" />}>
           <Team />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 bg-background-light dark:bg-background-dark" />}>
           <Location />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 bg-background-light dark:bg-background-dark" />}>
           <Recommendations />
         </Suspense>
       </main>
