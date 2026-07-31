@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-slate-600 dark:text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-lg" itemProp="description">
+          <p className="text-slate-700 dark:text-gray-200 text-lg md:text-xl font-normal leading-relaxed max-w-lg" itemProp="description">
             Llegamos rápido a donde estés. Apertura de puertas y vehículos sin daños, duplicado de llaves con chip y cerraduras de seguridad para hogar y empresa.
           </p>
 
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="text-sm font-black text-slate-900 dark:text-white">4.9 / 5.0</span>
-                <div className="flex text-accent gap-0.5" aria-label="Calificación de 5 estrellas">
+                <div className="flex text-accent gap-0.5" role="img" aria-label="Calificación de 5 estrellas">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-3.5 text-accent" aria-hidden="true">
                       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <span className="text-xs text-slate-600 dark:text-gray-400 font-medium">+120 reseñas verificadas en Piura</span>
+              <span className="text-xs text-slate-700 dark:text-gray-300 font-medium">+120 reseñas verificadas en Piura</span>
             </div>
           </div>
         </div>
@@ -78,10 +78,11 @@ const Hero: React.FC = () => {
               <img
                 src="/hero-bg.webp"
                 alt="Servicio de cerrajería profesional en Piura"
-                className="absolute inset-0 w-full h-full object-cover mix-blend-normal dark:mix-blend-overlay opacity-95 dark:opacity-75 transition-scale duration-500 ease-out-emil hover:scale-105"
-                fetchPriority="high"
                 width="448"
                 height="560"
+                decoding="async"
+                fetchPriority="high"
+                className="absolute inset-0 w-full h-full object-cover mix-blend-normal dark:mix-blend-overlay opacity-95 dark:opacity-75 transition-scale duration-500 ease-out-emil hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent dark:from-navy-dark dark:via-navy-dark/30 pointer-events-none"></div>
 

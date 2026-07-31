@@ -51,17 +51,17 @@ const Recommendations: React.FC = () => {
                     {RECOMMENDATIONS.map((rec, idx) => (
                         <div key={idx} className="bg-white dark:bg-navy-light/50 border border-black/5 dark:border-white/5 p-8 rounded-2xl flex flex-col gap-6 relative group hover:border-accent/20 transition-emil duration-300">
                             <div className="flex justify-between items-start">
-                                <div className="flex text-accent gap-0.5" aria-label={`Calificación de ${rec.rating} de 5 estrellas`}>
+                                <div className="flex text-accent gap-0.5" role="img" aria-label={`Calificación de ${rec.rating} de 5 estrellas`}>
                                     {[...Array(5)].map((_, i) => (
-                                        <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={i < rec.rating ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" className={`size-3.5 ${i < rec.rating ? 'text-accent' : 'text-gray-300 dark:text-gray-600'}`} aria-hidden="true">
+                                        <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={i < rec.rating ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" className={`size-3.5 ${i < rec.rating ? 'text-accent' : 'text-gray-400 dark:text-gray-600'}`} aria-hidden="true">
                                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{rec.date}</span>
+                                <span className="text-xs text-gray-600 dark:text-gray-400 font-medium">{rec.date}</span>
                             </div>
 
-                            <p className="text-gray-700 dark:text-gray-300 italic leading-relaxed">"{rec.text}"</p>
+                            <p className="text-gray-800 dark:text-gray-200 italic leading-relaxed">"{rec.text}"</p>
 
                             <div className="flex items-center gap-3 mt-auto pt-4 border-t border-black/5 dark:border-white/5">
                                 <div className="size-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold border border-accent/20">
@@ -77,7 +77,7 @@ const Recommendations: React.FC = () => {
                                             </svg>
                                         )}
                                     </span>
-                                    <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wider">Cliente Verificado en Piura</span>
+                                    <span className="text-[10px] text-gray-600 dark:text-gray-400 uppercase tracking-wider font-semibold">Cliente Verificado en Piura</span>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ const Recommendations: React.FC = () => {
                         <span className="text-gray-900 dark:text-white">Puntuación:</span>
                         <span className="text-accent">4.9 / 5</span>
                     </div>
-                    <div className="flex text-accent gap-1" aria-label="Calificación promedio de 5 estrellas">
+                    <div className="flex text-accent gap-1" role="img" aria-label="Calificación promedio de 5 estrellas">
                         {[...Array(5)].map((_, i) => (
                             <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5 text-accent" aria-hidden="true">
                               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />

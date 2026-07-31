@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { CONTACT_INFO, getWhatsAppLink } from '../constants';
 
 const Location: React.FC = () => {
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '400px' }
+    );
+
+    if (mapContainerRef.current) {
+      observer.observe(mapContainerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const urbanZones = ['Piura Centro', 'Castilla', 'Veintiséis de Octubre'];
   const regionalZones = [
     'Sullana',
@@ -127,7 +148,7 @@ const Location: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: High-Performance Styled Map Container (7 cols) */}
+          {/* Right Column: Deferred Mount Map Container (7 cols) */}
           <div className="lg:col-span-7 relative min-h-[440px] rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-sm bg-slate-100 dark:bg-navy-light/40 flex flex-col group">
             {/* Top Floating Badge */}
             <div className="absolute top-4 left-4 z-10 flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/90 dark:bg-navy-dark/90 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-md">
@@ -135,17 +156,24 @@ const Location: React.FC = () => {
               <span className="text-xs font-bold text-gray-900 dark:text-white">Base Móvil: {CONTACT_INFO.address}</span>
             </div>
 
-            {/* Clean High-Performance Map Container */}
-            <div className="relative w-full h-full min-h-[440px]">
-              <iframe
-                title="Mapa de cobertura en Piura"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                className="w-full h-full min-h-[440px] border-0 transition-opacity duration-300 opacity-95 dark:opacity-80 dark:invert dark:contrast-125 dark:brightness-75"
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT_INFO.mapQuery)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
-                allowFullScreen
-              />
+            {/* High-Performance Map Mount */}
+            <div ref={mapContainerRef} className="relative w-full h-full min-h-[440px]">
+              {shouldLoadMap ? (
+                <iframe
+                  title="Mapa de cobertura en Piura"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  className="w-full h-full min-h-[440px] border-0 transition-opacity duration-300 opacity-95 dark:opacity-80 dark:invert dark:contrast-125 dark:brightness-75"
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT_INFO.mapQuery)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                  allowFullScreen
+                />
+              ) : (
+                <div className="w-full h-full min-h-[440px] bg-slate-100 dark:bg-navy-light/40 flex flex-col items-center justify-center gap-3">
+                  <div className="size-8 rounded-full border-2 border-accent border-t-transparent animate-spin" />
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Cargando mapa de cobertura...</span>
+                </div>
+              )}
             </div>
 
             {/* Bottom Overlay Link */}
