@@ -164,7 +164,7 @@ const Location: React.FC = () => {
                   width="100%"
                   height="100%"
                   loading="lazy"
-                  className="w-full h-full min-h-[440px] border-0 transition-opacity duration-300 opacity-95 dark:opacity-80 dark:invert dark:contrast-125 dark:brightness-75"
+                  className="w-full h-full min-h-[440px] border-0 transition-opacity duration-300 opacity-95 dark:opacity-90"
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT_INFO.mapQuery)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
                   allowFullScreen
                 />
